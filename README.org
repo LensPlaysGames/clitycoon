@@ -1,0 +1,41 @@
+* =clitycoon=
+
+I wanted to make a VERY simple CLI game, so I did, and in all of, like, 20 minutes...
+
+** The "Game"
+
+Make dinero. So, like real life, but less rewarding. Oh, and also less impactful.
+
+** Building
+
+It uses [[https://cmake.org/][CMake]], and it's a C++ project. So, you'll need a C compiler, C++ compiler, and standard libraries for both. We like [[https://gcc.gnu.org/][GCC]]. And CMake, obviously.
+
+*** Create a Build Directory
+
+CMake likes out-of-source builds, and so do we. Create a build directory using the following command.
+
+=-B <directory>= tells CMake to generate a build directory for the current project at the given location.
+
+#+begin_src shell
+  cmake -B build_dir
+#+end_src
+
+*** Build the Thing
+
+=--build <directory>= tells CMake to actually invoke build commands on the source files with the compiler suite it found on your computer.
+
+#+begin_src shell
+  cmake --build build_dir
+#+end_src
+
+If any errors occur, fix them yourself :).
+
+*** Run the Thing
+
+Invoke the executable.
+
+#+begin_src shell
+  ./build_dir/clitycoon
+#+end_src
+
+And you're off. Try to get to mine strength 10, I dare you.
