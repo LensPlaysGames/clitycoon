@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 project(project_clitycoon LANGUAGES CXX)
 
-add_executable(clitycoon src/clioptions.cpp src/main.cpp)
+add_executable(clitycoon src/clioptions.cpp src/persistent.cpp src/main.cpp)
 target_include_directories(clitycoon PUBLIC src)
 
 # Copy compile commands to top level so language servers can find it
